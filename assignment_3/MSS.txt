@@ -1,0 +1,28 @@
+syahazzarena@ubuntu:~$ ifconfig
+ens33     Link encap:Ethernet  HWaddr 00:0c:29:b8:a3:25  
+          inet addr:192.168.47.128  Bcast:192.168.47.255  Mask:255.255.255.0
+          inet6 addr: fe80::f471:f5cc:4ca0:5231/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:297339 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:147147 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:397387399 (397.3 MB)  TX bytes:9282270 (9.2 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1834 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1834 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:185375 (185.3 KB)  TX bytes:185375 (185.3 KB)
+
+syahazzarena@ubuntu:~$ sudo sysctl net.ipv4.tcp_app_win=300
+net.ipv4.tcp_app_win = 300
+syahazzarena@ubuntu:~$ sudo sysctl -a|grep tcp_app_win
+net.ipv4.tcp_app_win = 300
+sysctl: reading key "net.ipv6.conf.all.stable_secret"
+sysctl: reading key "net.ipv6.conf.default.stable_secret"
+sysctl: reading key "net.ipv6.conf.ens33.stable_secret"
+sysctl: reading key "net.ipv6.conf.lo.stable_secret"
+syahazzarena@ubuntu:~$ sudo sysctl -a|grep tcp_app_win
