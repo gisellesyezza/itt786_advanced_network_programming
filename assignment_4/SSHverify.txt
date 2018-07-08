@@ -1,0 +1,7 @@
+syahazzarena@ubuntu:~$ ssh -v 192.168.47.128
+OpenSSH_7.2p2 Ubuntu-4ubuntu2.4, OpenSSL 1.0.2g  1 Mar 2016
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: Applying options for *
+debug1: Connecting to 192.168.47.128 [192.168.47.128] port 22.
+debug1: connect to address 192.168.47.128 port 22: Connection refused
+ssh: connect to host 192.168.47.128 port 22: Connection refused
